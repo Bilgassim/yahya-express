@@ -3,1050 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yahya Express | Livraison Rapide et Sécurisée à Berkane</title>
-  <meta name="description" content="Yahya Express - Votre service de livraison n°1 à Berkane. Colis, courses, restauration rapide et achats livrés chez vous rapidement et en toute sécurité.">
-  <meta name="keywords" content="Yahya Express, livraison Berkane, livraison rapide Berkane, livraison repas Berkane, coursier Berkane, transport colis Berkane">
-
-  <!-- Favicon -->
+  <title>Yahya Express | Livraison Rapide et Sécurisée</title>
+  <meta name="description" content="Yahya Express - Service professionnel de livraison rapide et sécurisée à Berkane. Colis, courses et restauration.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/favicon.png">
-
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="Yahya Express - Livraison Rapide et Sécurisée à Berkane">
-  <meta property="og:description" content="Colis petits ou grands, courses, repas de restaurant : Yahya Express livre partout à Berkane avec rapidité, sécurité et confiance.">
-  <meta property="og:image" content="assets/images/poster-hero.jpg">
-  <meta property="og:type" content="website">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/styles/style.css">
-  <link rel="stylesheet" href="assets/styles/components.css">
-  <link rel="stylesheet" href="assets/styles/responsive.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="announcement-bar">
-    <div class="container announcement-inner">
-      <div>
-        <span class="status-dot"></span>
-        <strong>Yahya Express Berkane :</strong> Service actif 7j/7 midi et soir
-      </div>
-      <div>
-        📞 Appel direct : <a href="tel:+212600488901">+212 600-488901</a> &bull; 💬 WhatsApp disponible
-      </div>
-    </div>
-  </div>
-
-  <!-- Sticky Header -->
+  <!-- En-tete fixe (Sticky Header) -->
   <header class="header">
     <div class="container">
       <nav class="navbar">
-        <!-- Brand Logo -->
-        <a href="index.html" class="logo-link">
-          <img src="assets/images/logo.svg" alt="Yahya Express Logo" class="logo-img" width="48" height="48">
-          <div class="logo-text-wrap">
-            <span class="logo-brand">YAHYA <span>EXPRESS</span></span>
-            <span class="logo-tagline">Livraison Berkane</span>
-          </div>
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/logo.svg" alt="Yahya Express" width="48" height="48">
+          <span class="brand-name">YAHYA <span>EXPRESS</span></span>
         </a>
 
-        <!-- Desktop Navigation Menu -->
-        <ul class="nav-menu">
+        <ul class="nav-links">
           <li><a href="index.html" class="nav-link active">Accueil</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="#simulateur" class="nav-link">Tarifs & Devis</a></li>
-          <li><a href="#galerie" class="nav-link">Galerie</a></li>
-          <li><a href="#apropos" class="nav-link">Identité</a></li>
-          <li><a href="#avis" class="nav-link">Avis</a></li>
+          <li><a href="gallery.html" class="nav-link">Galerie</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
 
-        <!-- Action CTAs -->
-        <div class="nav-actions">
-          <a href="tel:+212600488901" class="nav-phone-btn">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
-            <span>+212 600-488901</span>
-          </a>
-          <a href="https://wa.me/212600488901?text=Bonjour%20Yahya%20Express,%20je%20souhaite%20commander%20une%20livraison." target="_blank" class="btn btn-primary btn-sm">
-            <span>Commander</span>
-          </a>
+        <div class="nav-cta">
+          <a href="tel:+212600488901" class="phone-link">+212 600-488901</a>
+          <a href="contact.html" class="btn btn-primary">Commander</a>
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button class="mobile-toggle" aria-label="Ouvrir le menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </nav>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div class="drawer-backdrop"></div>
-  <aside class="mobile-drawer">
-    <div>
-      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
-        <img src="assets/images/logo.svg" alt="Yahya Express" style="width: 42px; height: 42px; border-radius: 8px;">
-        <span style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 900;">YAHYA <span style="color: var(--color-primary);">EXPRESS</span></span>
-      </div>
-      <ul class="mobile-nav-list">
-        <li><a href="index.html" class="mobile-nav-link active">Accueil</a></li>
-        <li><a href="services.html" class="mobile-nav-link">Nos Services</a></li>
-        <li><a href="#simulateur" class="mobile-nav-link">Simulateur de Tarif</a></li>
-        <li><a href="#galerie" class="mobile-nav-link">Galerie Photos & Vidéos</a></li>
-        <li><a href="#apropos" class="mobile-nav-link">Notre Identité</a></li>
-        <li><a href="#avis" class="mobile-nav-link">Témoignages</a></li>
-        <li><a href="contact.html" class="mobile-nav-link">Contact & Commande</a></li>
-      </ul>
-    </div>
-    <div class="drawer-footer">
-      <a href="tel:+212600488901" class="btn btn-dark" style="width: 100%;">
-        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
-        Appeler : 0600-488901
-      </a>
-      <a href="https://wa.me/212600488901?text=Bonjour%20Yahya%20Express,%20je%20souhaite%20commander%20une%20livraison." target="_blank" class="btn btn-whatsapp" style="width: 100%;">
-        Commander sur WhatsApp
-      </a>
-    </div>
-  </aside>
-
-  <!-- Main Hero Section -->
-  <section class="hero">
-    <div class="hero-pattern-bg"></div>
+  <!-- Hero Section -->
+  <section class="hero fade-in">
     <div class="container">
       <div class="hero-grid">
-        <!-- Hero Content (Left) -->
-        <div class="hero-content reveal">
-          <div class="hero-badge-pill">
-            <span class="pulse-dot"></span>
-            <span>NOUS SOMMES DISPONIBLES ! • LIVRAISON 7J/7</span>
-          </div>
-
-          <h1 class="hero-title">
-            Livraison <span class="highlight">Rapide</span> & Sécurisée Partout à Berkane
-          </h1>
-
+        <div class="hero-content">
+          <span class="hero-tag">Service de livraison professionnelle</span>
+          <h1 class="hero-title">Livraison rapide et sécurisée</h1>
           <p class="hero-subtitle">
-            Vos colis, courses du quotidien et commandes de restaurants livrés chez vous en un temps record avec un professionnalisme irréprochable.
+            Yahya Express assure l'acheminement de vos colis, courses et commandes partout à Berkane avec rigueur et ponctualité.
           </p>
-
-          <div class="hero-features-list">
-            <div class="hero-feature-item">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              <span>À temps, à chaque fois</span>
-            </div>
-            <div class="hero-feature-item">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              <span>Boîtes isothermes sécurisées</span>
-            </div>
-            <div class="hero-feature-item">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              <span>Paiement à la livraison</span>
-            </div>
-          </div>
-
-          <div class="hero-cta-group">
-            <a href="https://wa.me/212600488901?text=Bonjour%20Yahya%20Express,%20je%20souhaite%20commander%20une%20livraison." target="_blank" class="btn btn-primary btn-lg">
-              <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-9-1a2 2 0 0 1 4 0v1h-4V6zm9 13H5V9h3v2h2V9h4v2h2V9h3v10z"/></svg>
-              <span>Commander une livraison</span>
-            </a>
-            <a href="tel:+212600488901" class="btn btn-secondary btn-lg">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
-              <span>Appeler maintenant</span>
-            </a>
-          </div>
-
-          <!-- Quick Metrics -->
-          <div class="hero-metrics">
-            <div class="metric-item">
-              <div class="metric-value">&lt; 30<span>min</span></div>
-              <div class="metric-label">Délai moyen de livraison</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-value">100<span>%</span></div>
-              <div class="metric-label">Clients satisfaits</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-value">7j<span>/7</span></div>
-              <div class="metric-label">Disponibilité continue</div>
-            </div>
+          <div class="btn-group">
+            <a href="contact.html" class="btn btn-primary">Commander une livraison</a>
+            <a href="tel:+212600488901" class="btn btn-outline">Appeler maintenant</a>
           </div>
         </div>
-
-        <!-- Hero Visual (Right) -->
-        <div class="hero-visual-wrapper reveal-right">
-          <div class="hero-main-card">
-            <img src="assets/images/poster-hero.jpg" alt="Yahya Express Moto Livraison Berkane" class="hero-card-img">
-            <div class="hero-card-overlay">
-              <span class="hero-card-tag">Yahya Express Officiel</span>
-              <h3 class="hero-card-title">Livraison rapide & sécurisée à Berkane</h3>
-            </div>
-          </div>
-
-          <!-- Dynamic Floating Badges -->
-          <div class="floating-badge floating-badge-1">
-            <div class="badge-icon-box badge-icon-green">
-              <span>✓</span>
-            </div>
-            <div>
-              <div class="badge-text-primary">Colis Livré avec Succès</div>
-              <div class="badge-text-sub">Prise en charge immédiate</div>
-            </div>
-          </div>
-
-          <div class="floating-badge floating-badge-2">
-            <div class="badge-icon-box badge-icon-red">
-              <span>⚡</span>
-            </div>
-            <div>
-              <div class="badge-text-primary">Service Express</div>
-              <div class="badge-text-sub">Partout à Berkane & environs</div>
-            </div>
-          </div>
+        <div class="hero-image-wrapper">
+          <img src="assets/images/poster-hero.jpg" alt="Yahya Express Livraison Moto">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Highlight Features / Valeurs -->
-  <section class="section section-white">
+  <!-- Points Forts (Key Features) -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Nos Engagements</span>
-        <h2 class="section-title">Pourquoi Choisir <span class="text-gradient">Yahya Express</span> ?</h2>
-        <p class="section-desc">
-          Nous mettons la barre très haut pour vous garantir une expérience de livraison fluide, ponctuelle et transparente à chaque commande.
-        </p>
+      <div class="section-header">
+        <h2 class="section-title">Nos engagements</h2>
+        <p class="section-subtitle">Les principes fondamentaux de notre service logistique.</p>
       </div>
 
       <div class="features-grid">
-        <!-- Feature 1: Rapidité -->
-        <div class="feature-card reveal delay-1">
-          <div class="feature-icon-wrapper">
-            <svg width="34" height="34" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
-          </div>
-          <h3 class="feature-title">RAPIDITÉ</h3>
-          <p class="feature-desc">
-            À temps, à chaque fois. Nos livreurs motorisés connaissent chaque ruelle et quartier de Berkane pour un acheminement ultra-rapide en moins de 30 minutes.
+        <div class="feature-card">
+          <h3 class="feature-title">Rapidité</h3>
+          <div class="feature-subtitle">À temps, à chaque fois</div>
+          <p class="feature-text">
+            Prise en charge directe et optimisation des trajets pour garantir le respect strict des horaires annoncés.
           </p>
-          <span class="feature-highlight-badge">⚡ Ponctualité garantie</span>
         </div>
 
-        <!-- Feature 2: Sécurité -->
-        <div class="feature-card reveal delay-2">
-          <div class="feature-icon-wrapper">
-            <svg width="34" height="34" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          </div>
-          <h3 class="feature-title">SÉCURITÉ</h3>
-          <p class="feature-desc">
-            Vos colis, notre priorité. Équipés de caissons isothermes renforcés, vos repas restent chauds, vos produits frais et vos documents restent intacts.
+        <div class="feature-card">
+          <h3 class="feature-title">Sécurité</h3>
+          <div class="feature-subtitle">Vos colis, notre priorité</div>
+          <p class="feature-text">
+            Équipements isothermes et protection adaptée pour préserver l'intégrité de vos biens durant le transport.
           </p>
-          <span class="feature-highlight-badge">🛡️ Soin & protection totale</span>
         </div>
 
-        <!-- Feature 3: Confiance -->
-        <div class="feature-card reveal delay-3">
-          <div class="feature-icon-wrapper">
-            <svg width="34" height="34" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-          </div>
-          <h3 class="feature-title">CONFIANCE</h3>
-          <p class="feature-desc">
-            Au service de nos clients. Courtoisie, communication transparente par WhatsApp et téléphone, et paiement direct à la réception sans frais cachés.
+        <div class="feature-card">
+          <h3 class="feature-title">Confiance</h3>
+          <div class="feature-subtitle">Au service de nos clients</div>
+          <p class="feature-text">
+            Personnel qualifié, communication transparente et remise en main propre sécurisée.
           </p>
-          <span class="feature-highlight-badge">🤝 Service client dévoué</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Brand Identity Section (Berkane Heritage) -->
-  <section class="section brand-section" id="apropos">
+  <!-- Presentation de la marque & Territoire -->
+  <section class="section">
     <div class="container">
-      <div class="brand-grid">
-        <!-- Media Mosaic with Real Images -->
-        <div class="brand-media-mosaic reveal-left">
-          <div class="mosaic-img-wrap mosaic-img-1">
-            <img src="assets/images/berkane-orange-monument.jpg" alt="Yahya Express au monument Orange de Berkane">
-          </div>
-          <div class="mosaic-img-wrap mosaic-img-2">
-            <img src="assets/images/i-love-berkane.jpg" alt="I Love Berkane">
-          </div>
-          <div class="mosaic-img-wrap mosaic-img-3">
-            <img src="assets/images/delivery-fleet-night.jpg" alt="Flotte Yahya Express la nuit">
+      <div class="brand-identity-grid">
+        <div>
+          <h2 class="section-title">La référence locale à Berkane</h2>
+          <p style="margin-bottom: 16px;">
+            Implantée au cœur de Berkane, l'entreprise Yahya Express met son réseau de coursiers motorisés au service des particuliers, commerces et professionnels de la restauration.
+          </p>
+          <p style="margin-bottom: 24px;">
+            Nous intervenons quotidiennement dans l'ensemble des quartiers de la ville pour répondre à vos impératifs de transport avec constance et efficacité.
+          </p>
+          <div class="btn-group">
+            <a href="services.html" class="btn btn-primary">Découvrir nos services</a>
+            <a href="gallery.html" class="btn btn-outline">Voir la galerie</a>
           </div>
         </div>
 
-        <!-- Content -->
-        <div class="brand-content reveal-right">
-          <span class="section-tag" style="background: rgba(214,0,0,0.25); color: #FF7777;">L'Esprit Yahya Express</span>
-          <h2 class="section-title">Ancré au Cœur de <span class="text-gradient">Berkane</span></h2>
-          <p class="brand-lead">
-            Yahya Express est né d’une volonté claire : offrir aux habitants et commerçants de la ville de Berkane un service de livraison digne des plus hauts standards internationaux, avec la chaleur et la proximité du service local.
-          </p>
-
-          <div class="brand-pillars">
-            <div class="pillar-item">
-              <h4><span>📍</span> Couverture Complète</h4>
-              <p>Du centre-ville aux quartiers résidentiels et périphériques de Berkane.</p>
-            </div>
-            <div class="pillar-item">
-              <h4><span>🛵</span> Équipage Professionnel</h4>
-              <p>Livreurs formés, polis et respectueux des horaires et de vos colis.</p>
-            </div>
-            <div class="pillar-item">
-              <h4><span>🍔</span> Partenaire Restauration</h4>
-              <p>Livraison des meilleurs fast-foods & restaurants réputés de la région.</p>
-            </div>
-            <div class="pillar-item">
-              <h4><span>💬</span> Contact Direct</h4>
-              <p>Une simple ligne WhatsApp ou appel suffit pour déclencher votre livreur.</p>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <a href="tel:+212600488901" class="btn btn-primary">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
-              Appelez le +212 600-488901
-            </a>
-            <a href="services.html" class="btn btn-outline-white">
-              Découvrir nos solutions
-            </a>
-          </div>
+        <div class="brand-identity-images">
+          <img src="assets/images/berkane-orange-monument.jpg" alt="Monument de Berkane">
+          <img src="assets/images/delivery-fleet-night.jpg" alt="Motos de livraison Yahya Express">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="section section-light" id="services">
+  <!-- Apercu des 3 Services Majeurs -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Ce que nous livrons</span>
-        <h2 class="section-title">Nos 3 Grands <span class="text-gradient">Services de Livraison</span></h2>
-        <p class="section-desc">
-          Une réponse sur-mesure pour chaque besoin du quotidien : du pli confidentiel aux courses complètes jusqu'au festin familial chaud livré à votre porte.
-        </p>
+      <div class="section-header">
+        <h2 class="section-title">Services proposés</h2>
+        <p class="section-subtitle">Trois catégories de prestations pour couvrir vos besoins quotidiens.</p>
       </div>
 
       <div class="services-grid">
-        <!-- Service 1: COLIS -->
-        <div class="service-card reveal delay-1">
-          <div class="service-img-wrap">
-            <img src="assets/images/delivery-packages-edf.jpg" alt="Livraison de colis Yahya Express">
-            <span class="service-badge">Colis Express</span>
-          </div>
-          <div class="service-body">
-            <span class="service-number">SERVICE 01</span>
-            <h3 class="service-title">📦 COLIS : Petits ou grands</h3>
-            <p class="service-desc">
-              Documents administratifs, courriers urgents, paquets e-commerce, cadeaux ou marchandises. Nous récupérons votre colis à l'adresse de votre choix et le remettons en main propre.
-            </p>
-            <ul class="service-checklist">
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Pli urgent & documents officiels
-              </li>
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Colis e-commerce avec encaissement (COD)
-              </li>
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Prise en charge soignée de vos objets
-              </li>
-            </ul>
-            <div class="service-footer">
-              <a href="https://wa.me/212600488901?text=Bonjour%20Yahya%20Express,%20je%20souhaite%20faire%20livrer%20un%20COLIS." target="_blank" class="btn btn-primary" style="width: 100%;">
-                Commander ce service
-              </a>
+        <!-- Service 1 -->
+        <div class="service-card">
+          <img src="assets/images/delivery-packages-edf.jpg" alt="Livraison de colis" class="service-card-image">
+          <div class="service-card-body">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
             </div>
+            <h3 class="service-card-title">1. COLIS</h3>
+            <p class="service-card-desc">Petits ou grands. Enlèvement et livraison de plis, documents administratifs et paquets en main propre.</p>
+            <a href="contact.html?service=colis" class="btn btn-outline">Commander ce service</a>
           </div>
         </div>
 
-        <!-- Service 2: COURSES -->
-        <div class="service-card reveal delay-2">
-          <div class="service-img-wrap">
-            <img src="assets/images/delivery-flowers-card.jpg" alt="Livraison de courses et achats Yahya Express">
-            <span class="service-badge badge-featured">Courses & Achats</span>
-          </div>
-          <div class="service-body">
-            <span class="service-number">SERVICE 02</span>
-            <h3 class="service-title">🛍️ COURSES : Vos achats livrés</h3>
-            <p class="service-desc">
-              Besoin de faire des courses sans quitter votre domicile ? Produits d'épicerie, médicaments d'urgence en pharmacie, bouquets de fleurs, quincaillerie ou shopping en boutique.
-            </p>
-            <ul class="service-checklist">
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Courses en supermarché & supérette
-              </li>
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Pharmacie & urgences médicales
-              </li>
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Fleurs, cadeaux & surprises
-              </li>
-            </ul>
-            <div class="service-footer">
-              <a href="https://wa.me/212600488901?text=Bonjour%20Yahya%20Express,%20je%20souhaite%20commander%20mes%20COURSES." target="_blank" class="btn btn-primary" style="width: 100%;">
-                Commander ce service
-              </a>
+        <!-- Service 2 -->
+        <div class="service-card">
+          <img src="assets/images/delivery-flowers-card.jpg" alt="Livraison de courses" class="service-card-image">
+          <div class="service-card-body">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
             </div>
+            <h3 class="service-card-title">2. COURSES</h3>
+            <p class="service-card-desc">Vos achats livrés. Achats en magasin, supermarché, pharmacie ou commerces de proximité.</p>
+            <a href="contact.html?service=courses" class="btn btn-outline">Commander ce service</a>
           </div>
         </div>
 
-        <!-- Service 3: PARTOUT & RESTAURATION -->
-        <div class="service-card reveal delay-3">
-          <div class="service-img-wrap">
-            <img src="assets/images/restaurant-napolitano.jpg" alt="Livraison restauration et repas chauds Yahya Express">
-            <span class="service-badge">Partout Chez Vous</span>
-          </div>
-          <div class="service-body">
-            <span class="service-number">SERVICE 03</span>
-            <h3 class="service-title">📍 PARTOUT : Chez vous</h3>
-            <p class="service-desc">
-              Vos restaurants préférés de Berkane (Kebab's, Mistral, Napolitano, Mac Time...) livrés chauds à la maison ou au bureau. Boîtes thermiques adaptées pour une saveur intacte.
-            </p>
-            <ul class="service-checklist">
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Plats chauds & fast-food sous caisson isolant
-              </li>
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Livraison à domicile ou sur votre lieu de travail
-              </li>
-              <li>
-                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Service garanti midi, soir & Ramadan
-              </li>
-            </ul>
-            <div class="service-footer">
-              <a href="https://wa.me/212600488901?text=Bonjour%20Yahya%20Express,%20je%20souhaite%20une%20livraison%20RESTAURATION%20/%20PARTOUT." target="_blank" class="btn btn-primary" style="width: 100%;">
-                Commander ce service
-              </a>
+        <!-- Service 3 -->
+        <div class="service-card">
+          <img src="assets/images/restaurant-napolitano.jpg" alt="Livraison restauration" class="service-card-image">
+          <div class="service-card-body">
+            <div class="service-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
+            <h3 class="service-card-title">3. PARTOUT</h3>
+            <p class="service-card-desc">Chez vous. Transport de repas chauds issus de vos restaurants partenaires favoris jusqu'à votre porte.</p>
+            <a href="contact.html?service=partout" class="btn btn-outline">Commander ce service</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Delivery Cost Simulator / Quote Builder -->
-  <section class="section section-dark" id="simulateur">
+  <!-- Banniere Appel d'urgence (Call Us Now) -->
+  <section class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag" style="background: rgba(214,0,0,0.2); color: #FF6666;">Tarification Transparente</span>
-        <h2 class="section-title" style="color: var(--color-white);">Estimez Votre <span class="text-gradient">Tarif de Livraison</span></h2>
-        <p class="section-desc" style="color: var(--color-dark-muted);">
-          Calculez instantanément le prix indicatif de votre course à Berkane et réservez votre coursier en un clic sur WhatsApp.
-        </p>
-      </div>
-
-      <div class="calculator-box reveal">
-        <form id="deliveryCalcForm" class="calculator-grid">
-          <div class="calc-inputs">
-            <!-- Service Type -->
-            <div class="calc-group">
-              <label class="calc-label" for="calcServiceType">Type de prestation</label>
-              <select id="calcServiceType" class="calc-select">
-                <option value="colis">📦 Colis standard / Document / Pli</option>
-                <option value="courses">🛍️ Courses / Achats supermarché</option>
-                <option value="restauration" selected>🍔 Repas / Restaurant / Fast-food</option>
-                <option value="pharmacie">💊 Pharmacie / Médicaments</option>
-                <option value="volumineux">📦 Colis lourd / Volumineux</option>
-              </select>
-            </div>
-
-            <!-- Zone in Berkane -->
-            <div class="calc-group">
-              <label class="calc-label" for="calcZone">Zone de livraison à Berkane</label>
-              <select id="calcZone" class="calc-select">
-                <option value="centre" selected>📍 Centre-ville de Berkane (Rayon proche)</option>
-                <option value="quartiers">📍 Quartiers résidentiels / Al Qods / Hay Salam / Hay Andalous</option>
-                <option value="sidi-slimane">📍 Sidi Slimane Echcharra / Périphérie Berkane</option>
-                <option value="saidia">📍 Saïdia / Région limitrophe (Sur devis express)</option>
-              </select>
-            </div>
-
-            <!-- Urgency Speed -->
-            <div class="calc-group">
-              <label class="calc-label">Délai souhaité</label>
-              <div class="calc-chips">
-                <label class="calc-chip">
-                  <input type="radio" name="calcSpeed" value="standard" checked>
-                  <div class="calc-chip-card">
-                    <span class="calc-chip-title">Standard</span>
-                    <span class="calc-chip-sub">~20-35 min</span>
-                  </div>
-                </label>
-                <label class="calc-chip">
-                  <input type="radio" name="calcSpeed" value="express">
-                  <div class="calc-chip-card">
-                    <span class="calc-chip-title">⚡ Express VIP</span>
-                    <span class="calc-chip-sub">&lt; 15-20 min</span>
-                  </div>
-                </label>
-                <label class="calc-chip">
-                  <input type="radio" name="calcSpeed" value="planifie">
-                  <div class="calc-chip-card">
-                    <span class="calc-chip-title">📅 Planifié</span>
-                    <span class="calc-chip-sub">Heure au choix</span>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Price Result Card -->
-          <div class="calc-result-card">
-            <div class="calc-result-label">Tarif estimé de votre course</div>
-            <div class="calc-price-display" id="calcPriceOutput">15 <span>DH</span></div>
-            <div class="calc-time-estimate" id="calcTimeOutput">⏱️ Délai estimé : 20 - 35 min</div>
-            <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 20px;">
-              Paiement à la livraison en espèces. Confirmation immédiate par message.
-            </p>
-            <a id="calcOrderBtn" href="#" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-              Commander avec cette estimation
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Photo & Video Gallery Section -->
-  <section class="section section-light" id="galerie">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Galerie En Action</span>
-        <h2 class="section-title">Yahya Express <span class="text-gradient">Sur le Terrain</span></h2>
-        <p class="section-desc">
-          Découvrez notre flotte de motos, nos partenariats avec les restaurants réputés de Berkane et notre présence quotidienne auprès de nos clients.
-        </p>
-      </div>
-
-      <!-- Gallery Filter Tabs -->
-      <div class="gallery-filter-nav reveal">
-        <button class="gallery-filter-btn active" data-filter="all">Tous les médias</button>
-        <button class="gallery-filter-btn" data-filter="fleet">Nos Motos & Équipement</button>
-        <button class="gallery-filter-btn" data-filter="restaurants">Partenaires Restaurants</button>
-        <button class="gallery-filter-btn" data-filter="berkane">Berkane & Campagnes</button>
-        <button class="gallery-filter-btn" data-filter="videos">🎥 Vidéos en direct</button>
-      </div>
-
-      <!-- Gallery Grid -->
-      <div class="gallery-grid" id="galleryGrid">
-        
-        <!-- Image 1: Poster Berkane Orange -->
-        <div class="gallery-item featured-wide" data-category="berkane fleet" data-type="image" data-src="assets/images/berkane-orange-monument.jpg">
-          <img src="assets/images/berkane-orange-monument.jpg" alt="Yahya Express au rond-point Orange de Berkane" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Symbole de la Ville</div>
-              <div class="gallery-item-title">Rond-Point de l'Orange - Berkane</div>
-              <div class="gallery-item-desc">Notre coursier en route pour une livraison express au coucher du soleil.</div>
-            </div>
-          </div>
+      <div class="cta-banner">
+        <div>
+          <h2>Besoin d'une livraison immédiate ?</h2>
+          <p>Contactez directement notre standard téléphonique ou formulez votre demande par WhatsApp.</p>
         </div>
-
-        <!-- Image 2: Restaurant Mac Time -->
-        <div class="gallery-item" data-category="restaurants" data-type="image" data-src="assets/images/restaurant-mactime.jpg">
-          <img src="assets/images/restaurant-mactime.jpg" alt="Livraison Restaurant Mac Time Berkane" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Partenaire Restauration</div>
-              <div class="gallery-item-title">Restaurant Mac Time</div>
-              <div class="gallery-item-desc">Prise en charge des commandes burgers & menus chauds.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 3: Restaurant Napolitano -->
-        <div class="gallery-item" data-category="restaurants" data-type="image" data-src="assets/images/restaurant-napolitano.jpg">
-          <img src="assets/images/restaurant-napolitano.jpg" alt="Livraison Restaurant Napolitano Berkane" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Partenaire Restauration</div>
-              <div class="gallery-item-title">Napolitano - El Gusto Italiano</div>
-              <div class="gallery-item-desc">Pizzas et spécialités italiennes livrées dans le sac isotherme officiel.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 4: Restaurant Kebab's -->
-        <div class="gallery-item" data-category="restaurants" data-type="image" data-src="assets/images/restaurant-kebabs.jpg">
-          <img src="assets/images/restaurant-kebabs.jpg" alt="Livraison Kebab's Berkane" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Partenaire Restauration</div>
-              <div class="gallery-item-title">Kebab's Burger & Tacos</div>
-              <div class="gallery-item-desc">Tacos, paninis et burgers livrés chez vous en quelques minutes.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 5: Restaurant Mistral -->
-        <div class="gallery-item" data-category="restaurants" data-type="image" data-src="assets/images/restaurant-mistral.jpg">
-          <img src="assets/images/restaurant-mistral.jpg" alt="Livraison Mistral Fast Food Berkane" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Partenaire Restauration</div>
-              <div class="gallery-item-title">Mistral Fast Food</div>
-              <div class="gallery-item-desc">Commande prête et emportée pour livraison nocturne.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 6: I Love Berkane -->
-        <div class="gallery-item" data-category="berkane" data-type="image" data-src="assets/images/i-love-berkane.jpg">
-          <img src="assets/images/i-love-berkane.jpg" alt="I Love Berkane de nuit" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Fierté Locale</div>
-              <div class="gallery-item-title">I ❤️ Berkane</div>
-              <div class="gallery-item-desc">La ville aux mille saveurs où nous opérons avec fierté jour et nuit.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 7: Ramadan Mubarak Special -->
-        <div class="gallery-item" data-category="berkane fleet" data-type="image" data-src="assets/images/ramadan-special.jpg">
-          <img src="assets/images/ramadan-special.jpg" alt="Campagne Ramadan Yahya Express" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Événement & Tradition</div>
-              <div class="gallery-item-title">Ramadan Mubarak</div>
-              <div class="gallery-item-desc">Service intensif pour le Ftour et les soirées de Ramadan.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 8: Delivery Dog / Friendly Delivery -->
-        <div class="gallery-item" data-category="fleet" data-type="image" data-src="assets/images/delivery-dog.jpg">
-          <img src="assets/images/delivery-dog.jpg" alt="Livreur Yahya Express et client" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Ambiance & Rencontres</div>
-              <div class="gallery-item-title">Au Plus Proche de Vous</div>
-              <div class="gallery-item-desc">Une équipe chaleureuse et appréciée de tout le voisinage.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 9: Delivery Flowers & Card -->
-        <div class="gallery-item" data-category="fleet" data-type="image" data-src="assets/images/delivery-flowers-card.jpg">
-          <img src="assets/images/delivery-flowers-card.jpg" alt="Livraison bouquet de roses et carte Yahya Express" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Cadeaux & Fleurs</div>
-              <div class="gallery-item-title">Bouquets & Surprises</div>
-              <div class="gallery-item-desc">Livraison délicate de fleurs avec carte de visite Yahya Express.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 10: Night Fleet Berkane -->
-        <div class="gallery-item" data-category="fleet" data-type="image" data-src="assets/images/delivery-fleet-night.jpg">
-          <img src="assets/images/delivery-fleet-night.jpg" alt="Flotte de scooters Yahya Express" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Notre Flotte</div>
-              <div class="gallery-item-title">Motos Prêtes au Départ</div>
-              <div class="gallery-item-desc">Flotte entretenue, équipée de boîtes isothermes spacieuses.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Image 11: Fuel up at Station -->
-        <div class="gallery-item" data-category="fleet berkane" data-type="image" data-src="assets/images/delivery-fuel-berkane.jpg">
-          <img src="assets/images/delivery-fuel-berkane.jpg" alt="Livreur Yahya Express à la station Winxo Berkane" loading="lazy">
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Sur la Route</div>
-              <div class="gallery-item-title">Toujours en Mouvement</div>
-              <div class="gallery-item-desc">Plein fait à la station Winxo de Berkane pour un service non-stop.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 1 -->
-        <div class="gallery-item" data-category="videos fleet" data-type="video" data-src="assets/videos/yahya-express-action-1.mp4">
-          <video src="assets/videos/yahya-express-action-1.mp4" muted preload="metadata"></video>
-          <div class="video-play-badge">▶</div>
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">▶</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Vidéo Réelle</div>
-              <div class="gallery-item-title">Yahya Express en Ville #1</div>
-              <div class="gallery-item-desc">Regardez notre livreur en action à Berkane.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="gallery-item" data-category="videos fleet" data-type="video" data-src="assets/videos/yahya-express-action-2.mp4">
-          <video src="assets/videos/yahya-express-action-2.mp4" muted preload="metadata"></video>
-          <div class="video-play-badge">▶</div>
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">▶</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Vidéo Réelle</div>
-              <div class="gallery-item-title">Yahya Express en Ville #2</div>
-              <div class="gallery-item-desc">Prise en charge et réactivité sur le terrain.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="gallery-item" data-category="videos fleet" data-type="video" data-src="assets/videos/yahya-express-action-3.mp4">
-          <video src="assets/videos/yahya-express-action-3.mp4" muted preload="metadata"></video>
-          <div class="video-play-badge">▶</div>
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">▶</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Vidéo Réelle</div>
-              <div class="gallery-item-title">Yahya Express en Ville #3</div>
-              <div class="gallery-item-desc">Les coulisses de la livraison rapide.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 4 -->
-        <div class="gallery-item" data-category="videos fleet" data-type="video" data-src="assets/videos/yahya-express-action-4.mp4">
-          <video src="assets/videos/yahya-express-action-4.mp4" muted preload="metadata"></video>
-          <div class="video-play-badge">▶</div>
-          <div class="gallery-overlay">
-            <div class="gallery-overlay-top">
-              <div class="gallery-zoom-icon">▶</div>
-            </div>
-            <div class="gallery-overlay-bottom">
-              <div class="gallery-item-category">Vidéo Réelle</div>
-              <div class="gallery-item-title">Yahya Express en Ville #4</div>
-              <div class="gallery-item-desc">Service professionnel de livraison à Berkane.</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Lightbox Modal Container -->
-  <div class="lightbox-modal" id="lightboxModal">
-    <div class="lightbox-close">&times;</div>
-    <div class="lightbox-nav-btn lightbox-prev">&#10094;</div>
-    <div class="lightbox-nav-btn lightbox-next">&#10095;</div>
-    <div class="lightbox-content">
-      <div class="lightbox-media-container" id="lightboxMediaContainer"></div>
-      <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
-  </div>
-
-  <!-- Testimonials Section -->
-  <section class="section section-white" id="avis">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Avis Clients</span>
-        <h2 class="section-title">Ce que disent nos <span class="text-gradient">Clients à Berkane</span></h2>
-        <p class="section-desc">
-          Particuliers, familles, commerçants et restaurateurs partagent leur expérience avec Yahya Express.
-        </p>
-      </div>
-
-      <div class="reviews-grid">
-        <div class="review-card reveal delay-1">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">
-              "Yahya Express est tout simplement le meilleur service de livraison à Berkane. Quand je commande chez Napolitano ou Kebab's, mon repas arrive brûlant en moins de 20 minutes. Livreur très poli !"
-            </p>
-          </div>
-          <div class="review-author">
-            <div class="review-avatar">M</div>
-            <div>
-              <div class="review-name">Mohammed B.</div>
-              <div class="review-role">Client régulier • Hay Al Qods</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card reveal delay-2">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">
-              "En tant que gérant de restaurant, avoir un partenaire comme Yahya Express nous permet de livrer nos clients rapidement sans aucun stress. Leurs sacs isothermes sont parfaits pour préserver la qualité de nos plats."
-            </p>
-          </div>
-          <div class="review-author">
-            <div class="review-avatar">R</div>
-            <div>
-              <div class="review-name">Restaurateur Partenaire</div>
-              <div class="review-role">Fast Food • Centre Ville Berkane</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card reveal delay-3">
-          <div>
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">
-              "J'avais une urgence de médicaments en pleine soirée. Yahya Express s'est chargé d'aller à la pharmacie de garde et de me livrer à domicile en un clin d'œil. Un grand merci pour votre sérieux !"
-            </p>
-          </div>
-          <div class="review-author">
-            <div class="review-avatar">F</div>
-            <div>
-              <div class="review-name">Fatima Z.</div>
-              <div class="review-role">Particulière • Berkane</div>
-            </div>
-          </div>
+        <div class="btn-group">
+          <a href="tel:+212600488901" class="btn btn-outline-white">Appeler : +212 600-488901</a>
+          <a href="https://wa.me/212600488901?text=Demande%20de%20livraison" target="_blank" class="btn btn-outline-white">WhatsApp</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- High-Impact Call Us Now Banner -->
-  <section class="section section-light" style="padding-bottom: 40px;">
-    <div class="container">
-      <div class="cta-banner reveal">
-        <div class="cta-banner-pattern"></div>
-        <div class="cta-banner-content">
-          <div>
-            <h2 class="cta-banner-title">Besoin d'une livraison immédiate à Berkane ?</h2>
-            <p class="cta-banner-desc">
-              Nos coursiers sont sur la route et prêts à intervenir. Un simple appel ou un message WhatsApp suffit pour déclencher votre commande.
-            </p>
-          </div>
-          <div class="cta-banner-actions">
-            <a href="tel:+212600488901" class="cta-phone-card">
-              <div class="cta-phone-icon">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
-              </div>
-              <div>
-                <div class="cta-phone-label">Appelez Directement</div>
-                <div class="cta-phone-number">+212 600-488901</div>
-              </div>
-            </a>
-            <a href="https://wa.me/212600488901?text=Bonjour%20Yahya%20Express,%20je%20souhaite%20commander%20une%20livraison." target="_blank" class="btn btn-whatsapp btn-lg">
-              <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-              Commander sur WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Bouton d'appel flottant -->
+  <a href="tel:+212600488901" class="floating-call-btn" aria-label="Appeler maintenant">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
+    <span>Appeler</span>
+  </a>
 
-  <!-- FAQ Accordion -->
-  <section class="section section-white">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Foire Aux Questions</span>
-        <h2 class="section-title">Questions <span class="text-gradient">Fréquentes</span></h2>
-        <p class="section-desc">
-          Tout ce que vous devez savoir sur le fonctionnement et les tarifs de Yahya Express à Berkane.
-        </p>
-      </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item active">
-          <button class="faq-question">
-            <span>Comment passer une commande de livraison ?</span>
-            <div class="faq-icon">&#9660;</div>
-          </button>
-          <div class="faq-answer" style="max-height: 200px;">
-            C'est extrêmement simple ! Vous pouvez nous appeler directement au <strong>+212 600-488901</strong>, nous écrire sur WhatsApp avec vos adresses de départ et d'arrivée, ou remplir le formulaire en ligne sur la page Contact. Un coursier est assigné immédiatement.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Quel est le délai moyen de livraison à Berkane ?</span>
-            <div class="faq-icon">&#9660;</div>
-          </button>
-          <div class="faq-answer">
-            En moyenne, nos livraisons intra-muros à Berkane prennent entre <strong>15 et 30 minutes</strong> à partir de la récupération du colis ou de la commande au restaurant.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Comment s'effectue le paiement ?</span>
-            <div class="faq-icon">&#9660;</div>
-          </button>
-          <div class="faq-answer">
-            Le paiement se fait directement à la livraison en espèces (Cash on Delivery). Pour les courses (achats en magasin/restaurant), notre coursier avance les frais et vous règle le ticket exact à l'arrivée avec le coût de la course.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Quelles zones couvrez-vous à Berkane et ses environs ?</span>
-            <div class="faq-icon">&#9660;</div>
-          </button>
-          <div class="faq-answer">
-            Nous couvrons l'ensemble des quartiers de Berkane (Centre-ville, Hay Salam, Hay Al Qods, Hay Andalous, Sidi Slimane Echcharra) et nous proposons également des courses spécifiques vers Saïdia et les zones voisines.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Êtes-vous disponibles pendant le mois de Ramadan ?</span>
-            <div class="faq-icon">&#9660;</div>
-          </button>
-          <div class="faq-answer">
-            Oui, absolument ! Yahya Express dispose d'un dispositif renforcé tout au long du mois de Ramadan pour assurer vos livraisons de Ftour, vos repas du soir et vos courses d'urgence.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- Pied de page -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Brand Info -->
-        <div class="footer-brand-info">
-          <a href="index.html" class="logo-link" style="color: var(--color-white);">
-            <img src="assets/images/logo.svg" alt="Yahya Express" class="logo-img" width="48" height="48">
-            <div class="logo-text-wrap">
-              <span class="logo-brand" style="color: var(--color-white);">YAHYA <span style="color: var(--color-primary-light);">EXPRESS</span></span>
-              <span class="logo-tagline" style="color: #94A3B8;">Livraison Berkane</span>
-            </div>
-          </a>
-          <p>
-            Votre partenaire de confiance pour la livraison rapide, sécurisée et locale à Berkane. Colis, courses et repas livrés avec excellence 7j/7.
-          </p>
-          <div class="social-links">
-            <a href="https://wa.me/212600488901" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
-            <a href="#" class="social-btn" aria-label="Facebook">📘</a>
-            <a href="#" class="social-btn" aria-label="Instagram">📸</a>
-            <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
-          </div>
+        <div class="footer-brand">
+          <span class="brand-name" style="color: var(--color-white);">YAHYA <span style="color: var(--color-primary);">EXPRESS</span></span>
+          <p>Service de livraison rapide et sécurisée à Berkane. Colis, courses et restauration.</p>
         </div>
 
-        <!-- Quick Links -->
         <div>
-          <h4 class="footer-heading">Navigation</h4>
+          <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Accueil</a></li>
-            <li><a href="services.html" class="footer-link">Nos Services</a></li>
-            <li><a href="#simulateur" class="footer-link">Simulateur de Tarif</a></li>
-            <li><a href="#galerie" class="footer-link">Galerie Photos & Vidéos</a></li>
-            <li><a href="#apropos" class="footer-link">À Propos de Nous</a></li>
-            <li><a href="contact.html" class="footer-link">Contact & Commande</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Services Links -->
         <div>
-          <h4 class="footer-heading">Services</h4>
+          <h4 class="footer-title">Contact</h4>
           <ul class="footer-links">
-            <li><a href="services.html#colis" class="footer-link">📦 Colis Petits & Grands</a></li>
-            <li><a href="services.html#courses" class="footer-link">🛍️ Courses & Achats</a></li>
-            <li><a href="services.html#restauration" class="footer-link">🍔 Restauration Partout</a></li>
-            <li><a href="services.html#pharmacie" class="footer-link">💊 Urgences Pharmacie</a></li>
-            <li><a href="services.html#b2b" class="footer-link">🤝 Partenariat Restaurants</a></li>
+            <li>Téléphone : +212 600-488901</li>
+            <li>Ville : Berkane, Maroc</li>
+            <li>Disponibilité : 7j/7</li>
           </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h4 class="footer-heading">Contact Direct</h4>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            <span>Berkane, Région de l'Oriental, Maroc</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
-            <a href="tel:+212600488901" style="color: #FFFFFF; font-weight: 700;">+212 600-488901</a>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-            <span>7j/7 • Service continu midi & soir</span>
-          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>
-          &copy; <span class="current-year"></span> <strong>Yahya Express</strong>. Tous droits réservés.
-        </div>
-        <div>
-          Livraison rapide, sécurisée et locale à Berkane
-        </div>
+        <div>&copy; <span class="current-year"></span> Yahya Express. Tous droits réservés.</div>
+        <div>Livraison rapide et sécurisée.</div>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Action Buttons (Sticky Call Now & WhatsApp) -->
-  <div class="floating-actions">
-    <!-- Call Now -->
-    <a href="tel:+212600488901" class="float-btn float-btn-call" aria-label="Appeler Yahya Express">
-      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
-      <span class="float-tooltip">Appelez-nous : 0600-488901</span>
-    </a>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/212600488901?text=Bonjour%20Yahya%20Express,%20je%20souhaite%20commander%20une%20livraison." target="_blank" class="float-btn float-btn-whatsapp" aria-label="Commander sur WhatsApp">
-      <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-      <span class="float-tooltip">Commander sur WhatsApp</span>
-    </a>
-
-    <!-- Back to top -->
-    <a href="#" class="float-btn float-btn-scroll" aria-label="Haut de page">
-      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
-    </a>
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/scripts/main.js"></script>
-  <script src="assets/scripts/calculator.js"></script>
-  <script src="assets/scripts/lightbox.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
