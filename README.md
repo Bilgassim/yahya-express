@@ -7,7 +7,7 @@ Site web moderne, ultra-rapide et responsive pour l'entreprise de livraison Yahy
 ## Présentation
 Yahya Express est le service de livraison de référence à Berkane et dans ses environs, garantissant rapidité, sécurité et confiance pour tous les types de courses et d'envois.
 
-- Téléphone : [+212 600-488901](tel:+212600488901)
+- Téléphone : [+212 697-893261](tel:+212697893261)
 - Ligne WhatsApp : [+212 697-893261](https://wa.me/212697893261?text=Demande%20de%20livraison)
 - Localisation : Berkane, Région de l'Oriental, Maroc
 - Disponibilité : 7j/7 (Service continu)
