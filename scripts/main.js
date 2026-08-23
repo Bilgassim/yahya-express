@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'Type de service : ' + (typeLivraison || 'Standard') + '\n' +
         'Message : ' + (message || 'Aucun message particulier');
 
-      var whatsappUrl = 'https://wa.me/212600488901?text=' + encodeURIComponent(text);
+      var whatsappUrl = 'https://wa.me/212697893261?text=' + encodeURIComponent(text);
       window.open(whatsappUrl, '_blank');
     });
   }
