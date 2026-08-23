@@ -1,0 +1,202 @@
+/* ==========================================================================
+   YAHYA EXPRESS - Responsive Stylesheet
+   Mobile-First & Breakpoint Adjustments
+   ========================================================================== */
+
+/* Large Tablets & Small Desktops (<= 1100px) */
+@media (max-width: 1100px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-visual-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .brand-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+/* Tablets (<= 900px) */
+@media (max-width: 900px) {
+  .nav-menu,
+  .nav-phone-btn {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cta-banner-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cta-banner-desc {
+    margin: 0 auto;
+  }
+
+  .cta-phone-card {
+    justify-content: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item.featured-wide {
+    grid-column: span 1;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* Mobile Devices (<= 640px) */
+@media (max-width: 640px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .hero {
+    padding: 40px 0 60px 0;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-card-img {
+    height: 380px;
+  }
+
+  .floating-badge {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+  }
+
+  .floating-badge-1,
+  .floating-badge-2 {
+    animation: none;
+  }
+
+  .brand-media-mosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .mosaic-img-1 {
+    height: 280px;
+  }
+
+  .mosaic-img-2,
+  .mosaic-img-3 {
+    height: 180px;
+  }
+
+  .brand-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-box {
+    padding: 28px 20px;
+  }
+
+  .calc-chips {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner {
+    padding: 40px 24px;
+  }
+
+  .contact-form-card {
+    padding: 30px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-full {
+    grid-column: span 1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-actions {
+    bottom: 18px;
+    right: 18px;
+    gap: 10px;
+  }
+
+  .float-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .float-tooltip {
+    display: none;
+  }
+
+  .announcement-inner {
+    font-size: 0.78rem;
+    gap: 8px;
+  }
+}
