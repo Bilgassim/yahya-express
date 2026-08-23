@@ -4,6 +4,18 @@ Toutes les modifications notables apportees a ce projet sont documentees dans ce
 
 ---
 
+## [1.5.0] - 2026-08-23
+
+### Ajoute
+- Version Arabe (العربية) complete avec gestion native du sens de lecture droite-a-gauche (RTL) :
+  - Creation du module `scripts/i18n.js` contenant les dictionnaires exhaustifs Francais / Arabe.
+  - Detection automatique de la langue du systeme client (`navigator.language`).
+  - Bouton interactif de bascule de langue (العربية / Français) dans la barre de navigation.
+  - Persistance du choix utilisateur dans `localStorage`.
+  - Adaptation CSS des polices arabes et des alignements textuels (`html[dir="rtl"]`).
+
+---
+
 ## [1.4.0] - 2026-08-23
 
 ### Ajoute

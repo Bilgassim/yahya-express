@@ -1,7 +1,7 @@
 /* ==========================================================================
    Yahya Express - Feuille de style principale
    Couleurs : Rouge #D60000 | Blanc #FFFFFF | Noir #111111
-   Design : Professionnel, Moderne, Responsive
+   Support Multilingue : Francais (LTR) & Arabe (RTL)
    ========================================================================== */
 
 :root {
@@ -16,6 +16,7 @@
   --color-gray-muted: #6B7280;
 
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-arabic: -apple-system, BlinkMacSystemFont, "Segoe UI", "Tahoma", "Cairo", Arial, sans-serif;
   
   --container-width: 1200px;
   --header-height: 76px;
@@ -37,6 +38,13 @@ html {
   color: var(--color-dark);
   background-color: var(--color-white);
   scroll-behavior: smooth;
+}
+
+/* Support RTL (Arabe) */
+html[dir="rtl"] {
+  font-family: var(--font-family-arabic);
+  direction: rtl;
+  text-align: right;
 }
 
 body {
@@ -112,8 +120,11 @@ img, video {
 .section-title {
   font-size: 2rem;
   margin-bottom: 12px;
-  text-transform: uppercase;
   letter-spacing: -0.5px;
+}
+
+html[dir="ltr"] .section-title {
+  text-transform: uppercase;
 }
 
 .section-subtitle {
@@ -171,6 +182,28 @@ img, video {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+/* Bouton de Changement de Langue */
+.lang-toggle-btn {
+  background-color: var(--color-gray-light);
+  color: var(--color-dark);
+  border: 1px solid var(--color-gray-border);
+  padding: 8px 14px;
+  border-radius: var(--border-radius);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-toggle-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
 }
 
 /* En-tete Fixe (Sticky Header) */
@@ -591,6 +624,11 @@ textarea.form-control {
   transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
+html[dir="rtl"] .floating-call-btn {
+  right: auto;
+  left: 24px;
+}
+
 .floating-call-btn:hover {
   background-color: var(--color-primary-hover);
   transform: translateY(-2px);
@@ -651,6 +689,12 @@ textarea.form-control {
   justify-content: space-between;
   font-size: 0.85rem;
   color: #6B7280;
+}
+
+/* Ajustements RTL Spécifiques */
+html[dir="rtl"] ul {
+  padding-right: 20px;
+  padding-left: 0;
 }
 
 /* Animations CSS pures (Fade In) */

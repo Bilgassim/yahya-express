@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +20,16 @@
         </a>
 
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Accueil</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="gallery.html" class="nav-link active">Galerie</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services</a></li>
+          <li><a href="gallery.html" class="nav-link active" data-i18n="nav_gallery">Galerie</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
         </ul>
 
         <div class="nav-cta">
+          <button class="lang-toggle-btn" aria-label="Langue">العربية</button>
           <a href="tel:+212697893261" class="phone-link">+212 697-893261</a>
-          <a href="contact.html" class="btn btn-primary">Commander</a>
+          <a href="contact.html" class="btn btn-primary" data-i18n="nav_order">Commander</a>
           <button class="mobile-menu-btn" aria-label="Menu">
             <span></span>
             <span></span>
@@ -43,8 +44,8 @@
   <section class="section section-dark fade-in">
     <div class="container">
       <div class="section-header" style="margin-bottom: 0;">
-        <h1 class="section-title">Galerie opérationnelle</h1>
-        <p class="section-subtitle" style="color: #D1D5DB;">
+        <h1 class="section-title" data-i18n="gallery_header_title">Galerie opérationnelle</h1>
+        <p class="section-subtitle" style="color: #D1D5DB;" data-i18n="gallery_header_sub">
           Aperçu photographique de nos équipements, partenariats et interventions à Berkane.
         </p>
       </div>
@@ -60,7 +61,7 @@
         <div class="gallery-card">
           <img src="assets/images/berkane-orange-monument.jpg" alt="Yahya Express au monument Orange de Berkane" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Monument de l'Orange</div>
+            <div class="gallery-card-title">Monument de l'Orange / ساحة الليمونة</div>
             <div class="gallery-card-desc">Berkane - Rond-point principal</div>
           </div>
         </div>
@@ -69,7 +70,7 @@
         <div class="gallery-card">
           <img src="assets/images/restaurant-mactime.jpg" alt="Restaurant Mac Time Berkane" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Restaurant Mac Time</div>
+            <div class="gallery-card-title">Restaurant Mac Time / مطعم ماك تايم</div>
             <div class="gallery-card-desc">Prise en charge des commandes repas</div>
           </div>
         </div>
@@ -78,7 +79,7 @@
         <div class="gallery-card">
           <img src="assets/images/restaurant-napolitano.jpg" alt="Restaurant Napolitano Berkane" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Restaurant Napolitano</div>
+            <div class="gallery-card-title">Restaurant Napolitano / مطعم نابوليتانو</div>
             <div class="gallery-card-desc">Livraison de spécialités italiennes</div>
           </div>
         </div>
@@ -87,7 +88,7 @@
         <div class="gallery-card">
           <img src="assets/images/restaurant-kebabs.jpg" alt="Restaurant Kebab's Berkane" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Restaurant Kebab's</div>
+            <div class="gallery-card-title">Restaurant Kebab's / مطعم كباب</div>
             <div class="gallery-card-desc">Enlèvement de restauration rapide</div>
           </div>
         </div>
@@ -96,7 +97,7 @@
         <div class="gallery-card">
           <img src="assets/images/restaurant-mistral.jpg" alt="Mistral Fast Food Berkane" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Mistral Fast Food</div>
+            <div class="gallery-card-title">Mistral Fast Food / مطعم ميسترال</div>
             <div class="gallery-card-desc">Acheminement de commandes nocturnes</div>
           </div>
         </div>
@@ -105,7 +106,7 @@
         <div class="gallery-card">
           <img src="assets/images/i-love-berkane.jpg" alt="Enseigne I Love Berkane" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Enseigne I Love Berkane</div>
+            <div class="gallery-card-title">I Love Berkane / أحب بركان</div>
             <div class="gallery-card-desc">Ville de Berkane</div>
           </div>
         </div>
@@ -114,7 +115,7 @@
         <div class="gallery-card">
           <img src="assets/images/delivery-fleet-night.jpg" alt="Flotte de motos de livraison" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Flotte de deux-roues</div>
+            <div class="gallery-card-title">Flotte de deux-roues / أسطول الدراجات</div>
             <div class="gallery-card-desc">Motos équipées de caissons isothermes</div>
           </div>
         </div>
@@ -123,7 +124,7 @@
         <div class="gallery-card">
           <img src="assets/images/delivery-packages-edf.jpg" alt="Sacs de livraison de colis" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Colis et commandes</div>
+            <div class="gallery-card-title">Colis et commandes / طرود ومشتريات</div>
             <div class="gallery-card-desc">Conditionnement pour le transport</div>
           </div>
         </div>
@@ -132,7 +133,7 @@
         <div class="gallery-card">
           <img src="assets/images/delivery-flowers-card.jpg" alt="Livraison de fleurs" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Livraison de fleurs</div>
+            <div class="gallery-card-title">Livraison de fleurs / توصيل الهدايا والورود</div>
             <div class="gallery-card-desc">Bouquet avec carte Yahya Express</div>
           </div>
         </div>
@@ -141,7 +142,7 @@
         <div class="gallery-card">
           <img src="assets/images/delivery-fuel-berkane.jpg" alt="Station Winxo Berkane" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Ravitaillement carburant</div>
+            <div class="gallery-card-title">Ravitaillement carburant / التزود بالوقود</div>
             <div class="gallery-card-desc">Station Winxo à Berkane</div>
           </div>
         </div>
@@ -150,7 +151,7 @@
         <div class="gallery-card">
           <img src="assets/images/delivery-dog.jpg" alt="Coursier Yahya Express" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Sur le terrain</div>
+            <div class="gallery-card-title">Sur le terrain / في الميدان</div>
             <div class="gallery-card-desc">Activité quotidienne dans les rues de Berkane</div>
           </div>
         </div>
@@ -159,7 +160,7 @@
         <div class="gallery-card">
           <img src="assets/images/ramadan-special.jpg" alt="Affiche Ramadan Yahya Express" loading="lazy">
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Opérations de Ramadan</div>
+            <div class="gallery-card-title">Opérations de Ramadan / عروض رمضان</div>
             <div class="gallery-card-desc">Affiche de communication saisonnière</div>
           </div>
         </div>
@@ -168,7 +169,7 @@
         <div class="gallery-card">
           <video src="assets/videos/yahya-express-action-1.mp4" controls preload="metadata"></video>
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Vidéo d'intervention 1</div>
+            <div class="gallery-card-title">Vidéo 1 / فيديو ميداني 1</div>
             <div class="gallery-card-desc">Enregistrement vidéo en direct</div>
           </div>
         </div>
@@ -177,7 +178,7 @@
         <div class="gallery-card">
           <video src="assets/videos/yahya-express-action-2.mp4" controls preload="metadata"></video>
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Vidéo d'intervention 2</div>
+            <div class="gallery-card-title">Vidéo 2 / فيديو ميداني 2</div>
             <div class="gallery-card-desc">Enregistrement vidéo en direct</div>
           </div>
         </div>
@@ -186,7 +187,7 @@
         <div class="gallery-card">
           <video src="assets/videos/yahya-express-action-3.mp4" controls preload="metadata"></video>
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Vidéo d'intervention 3</div>
+            <div class="gallery-card-title">Vidéo 3 / فيديو ميداني 3</div>
             <div class="gallery-card-desc">Enregistrement vidéo en direct</div>
           </div>
         </div>
@@ -195,7 +196,7 @@
         <div class="gallery-card">
           <video src="assets/videos/yahya-express-action-4.mp4" controls preload="metadata"></video>
           <div class="gallery-card-info">
-            <div class="gallery-card-title">Vidéo d'intervention 4</div>
+            <div class="gallery-card-title">Vidéo 4 / فيديو ميداني 4</div>
             <div class="gallery-card-desc">Enregistrement vidéo en direct</div>
           </div>
         </div>
@@ -209,12 +210,12 @@
     <div class="container">
       <div class="cta-banner">
         <div>
-          <h2>Besoin d'un coursier disponible ?</h2>
-          <p>Contactez notre standard par téléphone ou WhatsApp pour déclencher votre course.</p>
+          <h2 data-i18n="cta_banner_title">Besoin d'un coursier disponible ?</h2>
+          <p data-i18n="cta_banner_desc">Contactez notre standard par téléphone ou WhatsApp pour déclencher votre course.</p>
         </div>
         <div class="btn-group">
-          <a href="tel:+212697893261" class="btn btn-outline-white">Appeler : +212 697-893261</a>
-          <a href="https://wa.me/212697893261?text=Demande%20de%20livraison" target="_blank" class="btn btn-outline-white">WhatsApp : 0697893261</a>
+          <a href="tel:+212697893261" class="btn btn-outline-white" data-i18n="cta_banner_call">Appeler : +212 697-893261</a>
+          <a href="https://wa.me/212697893261?text=Demande%20de%20livraison" target="_blank" class="btn btn-outline-white" data-i18n="cta_banner_wa">WhatsApp : 0697893261</a>
         </div>
       </div>
     </div>
@@ -223,7 +224,7 @@
   <!-- Bouton d'appel flottant -->
   <a href="tel:+212697893261" class="floating-call-btn" aria-label="Appeler maintenant">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-.01z"/></svg>
-    <span>Appeler</span>
+    <span data-i18n="float_call">Appeler</span>
   </a>
 
   <!-- Pied de page -->
@@ -232,7 +233,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="brand-name" style="color: var(--color-white);">YAHYA <span style="color: var(--color-primary);">EXPRESS</span></span>
-          <p>Service de livraison rapide et sécurisée à Berkane. Colis, courses et restauration.</p>
+          <p data-i18n="footer_desc">Service de livraison rapide et sécurisée à Berkane. Colis, courses et restauration.</p>
           <div style="margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap;">
             <a href="https://www.facebook.com/share/r/18RxTsJQQd/" target="_blank" style="color: #9CA3AF; font-size: 0.9rem;">Facebook</a>
             <a href="https://www.instagram.com/yahyaexpress?utm_source=qr&igsi=OGlzcHl0dHpwaDJ2" target="_blank" style="color: #9CA3AF; font-size: 0.9rem;">Instagram</a>
@@ -242,17 +243,17 @@
         </div>
 
         <div>
-          <h4 class="footer-title">Navigation</h4>
+          <h4 class="footer-title" data-i18n="footer_nav_title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Galerie</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+            <li><a href="gallery.html" data-i18n="nav_gallery">Galerie</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-title">Informations Légales</h4>
+          <h4 class="footer-title" data-i18n="footer_legal_title">Informations Légales</h4>
           <ul class="footer-links">
             <li><a href="mentions-legales.html">Mentions légales</a></li>
             <li><a href="cgu.html">Conditions Générales d'Utilisation</a></li>
@@ -264,12 +265,13 @@
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; <span class="current-year"></span> Yahya Express. Tous droits réservés.</div>
-        <div>Standard : +212 697-893261 | WhatsApp : +212 697-893261 | Berkane, Maroc.</div>
+        <div>&copy; <span class="current-year"></span> Yahya Express. <span data-i18n="footer_rights">Tous droits réservés.</span></div>
+        <div data-i18n="footer_loc">Standard : +212 697-893261 | WhatsApp : +212 697-893261 | Berkane, Maroc.</div>
       </div>
     </div>
   </footer>
 
+  <script src="scripts/i18n.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>
