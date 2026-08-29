@@ -78,7 +78,7 @@ git commit -m "fix: mise a jour des horaires d'ouverture"
 ```bash
 git push origin main
 ```
-5. Le pipeline GitHub Actions construira et publiera automatiquement la nouvelle version sur `https://bilgassim.github.io/yahya-express/` en moins de 30 secondes.
+5. Le pipeline GitHub Actions construira et publiera automatiquement la nouvelle version sur `https://yahyaexpress.com` en moins de 30 secondes.
 
 ---
 

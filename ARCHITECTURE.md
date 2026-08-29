@@ -9,7 +9,7 @@ Ce document detaille l'architecture technique, l'organisation des fichiers et le
 - **Nom du projet :** Yahya Express
 - **Type d'application :** Site web vitrine et de mise en relation statique (JAMstack / Client-Side)
 - **Hebergement :** GitHub Pages avec workflow de deploiement automatise via GitHub Actions
-- **Nom de domaine :** https://bilgassim.github.io/yahya-express/
+- **Nom de domaine :** https://yahyaexpress.com
 - **Technologies utilisees :** HTML5 semantique, CSS3 moderne, JavaScript Vanilla (ES6+)
 - **Dependances externes :** Aucune dependance logicielle lourde ou framework JS (zero build step requis)
 
@@ -108,4 +108,4 @@ Le workflow `.github/workflows/deploy.yml` declenche automatiquement les etapes 
 1. `actions/checkout@v4` : Recuperation des sources.
 2. `actions/configure-pages@v5` : Configuration de l'environnement GitHub Pages.
 3. `actions/upload-pages-artifact@v3` : Emballage des fichiers statiques a la racine du depot.
-4. `actions/deploy-pages@v4` : Publication vers l'URL https://bilgassim.github.io/yahya-express/.
+4. `actions/deploy-pages@v4` : Publication vers l'URL officielle https://yahyaexpress.com.

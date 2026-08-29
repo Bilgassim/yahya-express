@@ -34,9 +34,9 @@ Yahya Express est le service de livraison de référence à Berkane et dans ses 
 
 ---
 
-## Déploiement GitHub Pages
-- **URL de production :** [https://bilgassim.github.io/yahya-express/](https://bilgassim.github.io/yahya-express/)
-- **Dépôt :** [https://github.com/Bilgassim/yahya-express](https://github.com/Bilgassim/yahya-express)
+## Déploiement et Production
+- **URL de production :** [https://yahyaexpress.com](https://yahyaexpress.com)
+- **Dépôt GitHub :** [https://github.com/Bilgassim/yahya-express](https://github.com/Bilgassim/yahya-express)
 
 ---
 

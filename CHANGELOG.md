@@ -2,6 +2,16 @@
 
 Toutes les modifications notables apportees a ce projet sont documentees dans ce fichier.
 
+## [2.0.0] - 2026-08-29
+
+### Ajoute
+- Configuration pour le nom de domaine officiel `https://yahyaexpress.com` :
+  - Creation du fichier `CNAME` pour GitHub Pages.
+  - Creation du fichier `.htaccess` pour les serveurs web (redirection HTTPS, compression Gzip, cache et securite).
+  - Creation du fichier `robots.txt` pour l'indexation par les moteurs de recherche.
+  - Mise a jour du fichier `sitemap.xml` avec le domaine de production.
+  - Mise a jour des mentions legales, cookies et documentation technique.
+
 ---
 
 ## [1.5.0] - 2026-08-23
