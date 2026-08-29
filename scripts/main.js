@@ -4,13 +4,44 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Navigation mobile
+  // Navigation mobile avec animation et fermeture automatique
   var menuBtn = document.querySelector('.mobile-menu-btn');
   var navLinks = document.querySelector('.nav-links');
 
   if (menuBtn && navLinks) {
-    menuBtn.addEventListener('click', function () {
-      navLinks.classList.toggle('mobile-open');
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = navLinks.classList.toggle('mobile-open');
+      menuBtn.classList.toggle('active', isOpen);
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Fermer le menu lors du clic sur un lien
+    var navItems = navLinks.querySelectorAll('a');
+    navItems.forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('mobile-open');
+        menuBtn.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fermer le menu lors d'un clic en dehors
+    document.addEventListener('click', function (e) {
+      if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+        navLinks.classList.remove('mobile-open');
+        menuBtn.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Fermer le menu avec la touche Echap
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('mobile-open')) {
+        navLinks.classList.remove('mobile-open');
+        menuBtn.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 

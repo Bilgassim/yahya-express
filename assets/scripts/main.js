@@ -1,195 +1,83 @@
-/**
- * YAHYA EXPRESS - Main JavaScript
- * Handles navigation, mobile drawer, scroll animations, FAQ accordion,
- * contact form WhatsApp dispatcher & general interactivity.
- */
+/* ==========================================================================
+   Yahya Express - Script JavaScript principal
+   Fonctionnalites : Navigation mobile, gestion de formulaire et WhatsApp
+   ========================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. STICKY HEADER & SCROLL BEHAVIOR
-  const header = document.querySelector('.header');
-  const scrollBtn = document.querySelector('.float-btn-scroll');
+document.addEventListener('DOMContentLoaded', function () {
+  // Navigation mobile avec animation et fermeture automatique
+  var menuBtn = document.querySelector('.mobile-menu-btn');
+  var navLinks = document.querySelector('.nav-links');
 
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = navLinks.classList.toggle('mobile-open');
+      menuBtn.classList.toggle('active', isOpen);
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
 
-    // Header shadow on scroll
-    if (header) {
-      if (scrollY > 30) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    }
-
-    // Back to top button visibility
-    if (scrollBtn) {
-      if (scrollY > 400) {
-        scrollBtn.classList.add('visible');
-      } else {
-        scrollBtn.classList.remove('visible');
-      }
-    }
-  });
-
-  // Scroll to top click
-  if (scrollBtn) {
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    // Fermer le menu lors du clic sur un lien
+    var navItems = navLinks.querySelectorAll('a');
+    navItems.forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('mobile-open');
+        menuBtn.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
       });
     });
-  }
 
-  // 2. MOBILE MENU DRAWER
-  const mobileToggle = document.querySelector('.mobile-toggle');
-  const mobileDrawer = document.querySelector('.mobile-drawer');
-  const drawerBackdrop = document.querySelector('.drawer-backdrop');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    // Fermer le menu lors d'un clic en dehors
+    document.addEventListener('click', function (e) {
+      if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+        navLinks.classList.remove('mobile-open');
+        menuBtn.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
 
-  function openDrawer() {
-    if (mobileToggle && mobileDrawer && drawerBackdrop) {
-      mobileToggle.classList.add('active');
-      mobileDrawer.classList.add('open');
-      drawerBackdrop.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeDrawer() {
-    if (mobileToggle && mobileDrawer && drawerBackdrop) {
-      mobileToggle.classList.remove('active');
-      mobileDrawer.classList.remove('open');
-      drawerBackdrop.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  }
-
-  if (mobileToggle) {
-    mobileToggle.addEventListener('click', () => {
-      if (mobileDrawer.classList.contains('open')) {
-        closeDrawer();
-      } else {
-        openDrawer();
+    // Fermer le menu avec la touche Echap
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('mobile-open')) {
+        navLinks.classList.remove('mobile-open');
+        menuBtn.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
       }
     });
   }
 
-  if (drawerBackdrop) {
-    drawerBackdrop.addEventListener('click', closeDrawer);
-  }
-
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', closeDrawer);
-  });
-
-  // 3. SCROLL REVEAL ANIMATIONS (IntersectionObserver)
-  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-  } else {
-    // Fallback for older browsers
-    revealElements.forEach(el => el.classList.add('active'));
-  }
-
-  // 4. FAQ ACCORDION
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
-
-    if (questionBtn && answer) {
-      questionBtn.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-
-        // Close other items
-        faqItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            otherItem.classList.remove('active');
-            const otherAnswer = otherItem.querySelector('.faq-answer');
-            if (otherAnswer) otherAnswer.style.maxHeight = null;
-          }
-        });
-
-        // Toggle current
-        if (isActive) {
-          item.classList.remove('active');
-          answer.style.maxHeight = null;
-        } else {
-          item.classList.add('active');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
-      });
-    }
-  });
-
-  // 5. CONTACT & ORDER FORM (Direct WhatsApp Dispatcher)
-  const orderForm = document.getElementById('yahyaOrderForm');
-  if (orderForm) {
-    orderForm.addEventListener('submit', (e) => {
+  // Formulaire de contact et transmission WhatsApp
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const name = document.getElementById('clientName')?.value.trim() || '';
-      const phone = document.getElementById('clientPhone')?.value.trim() || '';
-      const pickup = document.getElementById('pickupAddress')?.value.trim() || 'Non précisée';
-      const dropoff = document.getElementById('dropoffAddress')?.value.trim() || 'Non précisée';
-      const serviceType = document.getElementById('serviceType')?.value || 'Livraison';
-      const notes = document.getElementById('orderNotes')?.value.trim() || 'Aucune note particulière';
+      var nom = document.getElementById('nom') ? document.getElementById('nom').value.trim() : '';
+      var telephone = document.getElementById('telephone') ? document.getElementById('telephone').value.trim() : '';
+      var adresse = document.getElementById('adresse') ? document.getElementById('adresse').value.trim() : '';
+      var typeLivraison = document.getElementById('typeLivraison') ? document.getElementById('typeLivraison').value : '';
+      var message = document.getElementById('message') ? document.getElementById('message').value.trim() : '';
 
-      if (!name || !phone) {
-        alert('Veuillez renseigner votre nom et votre numéro de téléphone.');
+      if (!nom || !telephone) {
+        alert('Veuillez remplir votre nom et votre numero de telephone.');
         return;
       }
 
-      // Build WhatsApp message
-      const text = `🚚 *NOUVELLE DEMANDE DE LIVRAISON - YAHYA EXPRESS* 🚚\n\n` +
-        `👤 *Nom du client :* ${name}\n` +
-        `📞 *Téléphone :* ${phone}\n` +
-        `📦 *Type de service :* ${serviceType}\n` +
-        `📍 *Départ / Ramassage :* ${pickup}\n` +
-        `🏁 *Destination / Livraison :* ${dropoff}\n` +
-        `📝 *Détails & Instructions :* ${notes}\n\n` +
-        `_Message envoyé depuis le site officiel Yahya Express Berkane._`;
+      var text = 'Demande de livraison - Yahya Express\n\n' +
+        'Nom : ' + nom + '\n' +
+        'Telephone : ' + telephone + '\n' +
+        'Adresse : ' + (adresse || 'Non specifiee') + '\n' +
+        'Type de service : ' + (typeLivraison || 'Standard') + '\n' +
+        'Message : ' + (message || 'Aucun message particulier');
 
-      const encodedText = encodeURIComponent(text);
-      const whatsappUrl = `https://wa.me/212600488901?text=${encodedText}`;
-
-      // Open WhatsApp in new tab
+      var whatsappUrl = 'https://wa.me/212697893261?text=' + encodeURIComponent(text);
       window.open(whatsappUrl, '_blank');
-
-      // Visual feedback
-      const submitBtn = orderForm.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = `<span>✓ Demande transmise sur WhatsApp !</span>`;
-        submitBtn.style.background = '#25D366';
-        setTimeout(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.style.background = '';
-        }, 4000);
-      }
     });
   }
 
-  // 6. DYNAMIC CURRENT YEAR
-  const yearSpans = document.querySelectorAll('.current-year');
-  const curYear = new Date().getFullYear();
-  yearSpans.forEach(span => {
-    span.textContent = curYear;
+  // Annee courante pour le copyright
+  var yearElements = document.querySelectorAll('.current-year');
+  var currentYear = new Date().getFullYear();
+  yearElements.forEach(function (el) {
+    el.textContent = currentYear;
   });
 });
